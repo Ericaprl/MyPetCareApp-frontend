@@ -1,24 +1,85 @@
-header {
-    display: flex;
-    width: 100%;
-    padding: 30px;
-    height: 40px;
-    background: rgb(34, 34, 34);
-    justify-content: space-between;
+.navbar {
+  background-color: #9f84d5;
+  margin-top: 1px;
+  border-color: rgb(10, 10, 10);
+  height: 110px;  
+
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  justify-content: center;
+  width: 5rem;
+  height: auto;
+  padding-top: 1rem;
+
+}
+
+.nav-elements ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-elements ul li {
+  margin-right: 20px;
+  align-items: center;
+}
+
+.nav-elements ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Active class for responsive menu */
+.nav-elements.active {
+  display: block;
+}
+
+/* Hamburger icon styles */
+.menu-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: #333;
+}
+
+/* Media query for responsive menu */
+@media (max-width: 500px) {
+  .navbar {
+    height: auto;
   }
-  
-  header strong {
-    color: #fff;
+
+  .logo,
+  .menu-icon {
+    display: inline-block;
+    vertical-align: middle;
   }
-  
-  header a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 10px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+
+  .nav-elements {
+    display: none;
   }
-  
-  header a:hover {
-    color: rgb(145, 142, 142);
+
+  .nav-elements.active ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
   }
+
+  .nav-elements.active ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
