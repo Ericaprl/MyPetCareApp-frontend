@@ -6,7 +6,7 @@
 
 }
 
-.container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +25,8 @@
 .nav-elements ul {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  align-items: flex-start;
+  padding: 0;
   padding: 0;
 }
 
@@ -44,9 +45,13 @@
   cursor: pointer;
 }
 
-/* Active class for responsive menu */
 .nav-elements.active {
   display: block;
+  position:absolute;
+  background-color: #9f84d5;
+  width: 100%;
+  top: 110px;
+  
 }
 
 /* Hamburger icon styles */

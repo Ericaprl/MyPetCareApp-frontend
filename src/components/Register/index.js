@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import registerIMG from "../images/registerIMG.png";
 
 import api from "../../services/api"
 
@@ -27,34 +28,45 @@ function Register() {
 
 
     return (
-        <div className="container">
-            <form onSubmit={handleSubmit}>
+      <div className="register">
+        <div className="rcontainer">
+
+        <div className="image">
+        <img src={registerIMG} alt="Imagem" />
+      </div>
+<div className="form">
+            <form   onSubmit={handleSubmit}>
             <h2> Sign Up </h2>
 
 
             <div className="row">
           <span>First Nome</span>
-          <input type="text" name="fname" onChange={handleChange} />
+          <input type="text" name="fname" className="reg-input" onChange={handleChange} required/>
         </div>
 
         <div className="row">
           <span>Last Nome</span>
-          <input type="text" name="lname"  onChange={handleChange}/>
+          <input type="text" name="lname" className="reg-input" onChange={handleChange} required/>
         </div>
 
         <div className="row">
           <span>E-mail</span>
-          <input type="text" name="email" onChange={handleChange} />
+          <input type="text" name="email" className="reg-input"onChange={handleChange} required />
         </div>
 
         <div className="row">
           <span>Username</span>
-          <input type="text" name="username" onChange={handleChange}/>
+          <input type="text" name="username" className="reg-input"onChange={handleChange} required/>
         </div>
 
         <div className="row">
           <span>Password</span>
-          <input type="password" name="password" onChange={handleChange} />
+          <input type="password" name="password" className="reg-input" onChange={handleChange}  required/>
+          {user.password && user.password.length < 8 && (
+                <p className="password-reminder">
+                  Password must be at least 8 characters long.
+                </p>
+              )}
         </div>
       
 
@@ -63,8 +75,9 @@ function Register() {
         </div>
 
             </form>
+            </div>
 
-
+        </div>
         </div>
     );
 }

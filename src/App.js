@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "./components/Header"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import AllRoutes from "./allRoutes";
 import { AuthProvider } from "./components/context/AuthContext"
 import "./index.css";
@@ -10,6 +11,7 @@ function App() {
       <>
         <Header />
         <AllRoutes />
+        <Footer />
       </>
     </AuthProvider>
   );

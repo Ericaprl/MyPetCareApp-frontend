@@ -4,10 +4,10 @@ import React from "react";
 // const { auth } = useContext(AuthContext);
 // {auth.user && <strong> Welcome !! {auth?.user.name}</strong>}
 
-import  {ReactComponent as Brand } from "./pawprint.svg";
+import  {ReactComponent as Brand } from "../images/pawprint.svg"
 import "./style.css";
 import { useState } from 'react'
-import { ReactComponent as Hamburger } from "./hamburger.svg";
+import { ReactComponent as Hamburger } from "../images/hamburger.svg";
 
 
 function Header() {
@@ -23,7 +23,7 @@ function Header() {
   return (
     <header>
       <nav className="navbar">
-        <div className="container">  
+        <div className="header-container">  
         <div className="logo">
             <Brand />
             
@@ -44,7 +44,7 @@ function Header() {
                 <a href="/">About</a>
               </li>
               <li>
-                <a href="/">Pet Grooming</a>
+                <a href="/">Pet Shops</a>
               </li>
               <li>
                 <a href="/">Contact</a>
