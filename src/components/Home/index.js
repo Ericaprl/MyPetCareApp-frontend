@@ -7,7 +7,6 @@ import catHome from "../images/catHome.png";
 import playPets from "../images/playpets.png";
 import playing from "../images/playing.png";
 
-// import api from "../../services/api";
 
 import "./style.css";
 
@@ -18,7 +17,7 @@ function Section () {
                 <div className="section-content">
                     <img src={petGrooming} alt="Imagem 1" />
                     <h1>Find the nearest Pet Shops and ensure specialized products and services for your furry friend.</h1>
-                    <a href="/Register">
+                    <a href="/mapSearch">
                         <button> Learn more </button>
                     </a>
                 </div>
@@ -28,7 +27,7 @@ function Section () {
                 <div className="section-content">
                     <img src={aboutImg} alt="Imagem 2" />
                     <h1>We are dedicated to promoting animal welfare by providing valuable information and resources to make your life with your pet even more rewarding.</h1>
-                    <a href="/About">
+                    <a href="/aboutUs">
                         <button> Learn more </button>
                     </a>
                 </div>
@@ -44,9 +43,11 @@ function Section () {
                 </div>
             </section>
 
+
+
             <section className="section2">
                 <div className="section-content2">
-                <a href="/About">
+                <a href="/aboutUs">
                     <img src={playing} alt="Imagem 4" />
                     </a>
                 </div>
@@ -54,7 +55,7 @@ function Section () {
 
             <section className="section2">
                 <div className="section-content2">
-                <a href="/About">
+                <a href="/aboutUs">
                     <img src={catHome} alt="Imagem 5" />
                     </a>
                 </div>
@@ -62,7 +63,7 @@ function Section () {
 
             <section className="section2">
                 <div className="section-content2">
-                <a href="/About">
+                <a href="/aboutUs">
                     <img src={dogOwner} alt="Imagem 6" />
                   </a>
                 </div>

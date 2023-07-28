@@ -11,7 +11,7 @@
     margin: auto;
     display: flex;
     border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(119, 92, 132, 0.3); /* Ajuste os valores da box shadow conforme desejado */
+    box-shadow: 0px 5px 20px rgba(119, 92, 132, 0.3); 
 
 }
 

@@ -1,67 +1,64 @@
-
-// Sign Up/Register: 
-// This page allows new users to create an account on your website, 
-// providing their basic information and possibly their pet's information. 
-// Profile: Once users are logged in, they can have a dedicated profile page 
-// where they can manage their account details, update pet information, 
-// view appointment history, 
-// or access any personalized features you offer.
-
-
 import React, { useEffect, useState } from "react";
-
+import { useLocation } from "react-router-dom";
 import api from "../../services/api";
-
 import "./style.css";
+import EventForm from "./EventForm";
 
+function Section2() {
+  return (
+    <div className="section2-content" >
+      <p className="p-section2"> Schedule a playdate and events with another pet owner and help your pet make friends.  </p>
+      <EventForm />
 
+    </div>
+
+  );
+
+}
 
 
 function Profile() {
+  const location = useLocation();
+  const username = location.state?.username || "Pet owner";
 
-    const [user, setUser] = useState([]);
-    
-    useEffect(() => {
-        const token = localStorage.getItem("@token:Petecareapp");
+  return (
 
-        console.log(token);
-
-        if (token) {
-            api.get("/users", {
-                headers: { "Authorization": `Bearer ${token}` }
-
-            }).then(response => setUser(response.data));
-
-        }
-
-    }, []);
-
-    return (
-        <div className="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>First Nome</th>
-                        <th>Last Nome</th>
-                        <th>E-mail</th>
-                        <th>Usuário</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {user.map((users) => {
-                        return (
-                            <tr key ={users._id}>
-                                <td>{users.fname}</td>
-                                <td>{users.lname}</td>
-                                <td>{users.email}</td>
-                                <td>{users.username}</td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
+    <div className="p-container">
+      <div className="section1-container">
+        {/* Seção 1: user name  */}
+        <div className="profile-info">
+          <h1>Hello,</h1>
+          <h2> {username}!</h2>
         </div>
-    );
+
+        {/* Seção 2: criar schedule events and invite other friends */}
+        <div className="sections-wrapper">
+          <div className="section-2">
+            <Section2 />
+          </div>
+
+
+          {/* Seção 3:  */}
+
+          <div className="section-3">
+          <p className="p-section3">Make a new friend by sending a message to another pet owner. </p>
+          </div>
+
+
+          {/* Seção 4:  */}
+          <div className="section-4">
+          <p className="p-section4"> Discover pet shops and grooming nearby. </p>
+          <a href="/mapSearch">
+                        <button> Pet shops </button>
+                    </a>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Profile;

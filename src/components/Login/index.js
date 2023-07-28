@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-
 import loginIMG from "../images/loginIMG.png";
 import "./style.css";
-
+ 
 
 function Login() {
   const navigate = useNavigate();
@@ -21,20 +20,18 @@ function Login() {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     if (!user.username || !user.password) {
       setError("Please, fill in all fields!");
       return;
     }
-    if (user.username === "username" && user.password === "password") {
-      authentication(user);
-      setTimeout(() => {
-        navigate("/profile");
-      }, 1000);
-    } else {
-      setError("Username or password incorrect !");
+    try {
+      await authentication(user);
+      navigate("/profile");
+    } catch (error) {
+      setError("Username or password incorrect!");
     }
   }
   return (

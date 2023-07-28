@@ -1,17 +1,12 @@
 import React from "react";
-//import { useContext } from "react";
-// import { AuthContext } from "../context/AuthContext"
-// const { auth } = useContext(AuthContext);
-// {auth.user && <strong> Welcome !! {auth?.user.name}</strong>}
-
 import  {ReactComponent as Brand } from "../images/pawprint.svg"
-import "./style.css";
 import { useState } from 'react'
 import { ReactComponent as Hamburger } from "../images/hamburger.svg";
+import "./style.css";
+
 
 
 function Header() {
-  // const { auth } = useContext(AuthContext);
 
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -41,16 +36,17 @@ function Header() {
                 <a href="/home">Home</a>
               </li>
               <li>
-                <a href="/">About</a>
-              </li>
-              <li>
-                <a href="/">Pet Shops</a>
-              </li>
-              <li>
-                <a href="/">Contact</a>
+                <a href="/aboutUs">About Us</a>
               </li>
               <li>
                 <a href="/login">Login</a>
+              </li>
+              <li>
+                <a href="/mapSearch">Pet Shops</a>
+              </li>
+            
+              <li>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>

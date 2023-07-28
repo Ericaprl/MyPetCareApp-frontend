@@ -1,0 +1,49 @@
+
+.map-container {
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color:#1b151e;
+  box-shadow: 0px 2px 10px rgba(119, 92, 132, 0.3); 
+  border-radius: 10px;
+}
+
+#map {
+  flex: 1;
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.text1map{
+    text-align: center;
+}
+
+.text-end p{
+    text-align: justify;
+}
+h4{
+  padding-top: 10px;
+
+}
+
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: 10px;
+  }
+
+  #map {
+    min-height: 300px;
+  }
+
+  .text-end {
+    font-size: 14px;
+  }
+}
+
+
+  

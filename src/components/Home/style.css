@@ -50,7 +50,6 @@
     background-color: #000;
     margin-top: 1%;
    
-    
   }
   .section-all, 
   .midle-title{
@@ -82,7 +81,6 @@
     align-items: center;
     text-align:justify;
     font-size: 10px;
-
     padding: 10px;
 
 }
@@ -124,14 +122,9 @@
     margin-bottom: 10px;
     border-radius: 10px;
     border-radius: 5px;
-    box-shadow: 0px 2px 10px rgba(119, 92, 132, 0.3); /* Ajuste os valores da box shadow conforme desejado */
+    box-shadow: 0px 2px 10px rgba(119, 92, 132, 0.3); 
 
 }
-
-
-
-
-
 
 @media screen and (min-width: 1000px) {
     .home-header {
