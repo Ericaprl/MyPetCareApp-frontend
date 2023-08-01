@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://mypetcare-api.onrender.com",
+  baseURL: "https://MyPetCareApp-frontend.onrender.com",
 });
 
 
