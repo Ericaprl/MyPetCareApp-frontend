@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useJsApiLoader } from "@react-google-maps/api";
-import config from "./config";
+import config from "../../config";
 import "./style.css";
 import GoogleMapsLink from "./GoogleMapsLink";
 

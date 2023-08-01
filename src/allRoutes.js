@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Profile from "./components/Profile";
+import Profile from "./components/Profile/index";
 import MapSearch from "./components/MapSearch";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";

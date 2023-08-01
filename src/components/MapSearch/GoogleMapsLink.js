@@ -1,5 +1,3 @@
-// GoogleMapsLink.js
-
 import React from "react";
 
 const GoogleMapsLink = ({ query, latitude, longitude }) => {
