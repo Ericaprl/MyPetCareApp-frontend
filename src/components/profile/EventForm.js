@@ -58,9 +58,13 @@ function SeeEventsModal({ events, onClose }) {
 function EventForm() {
     const [showModal, setShowModal] = useState(false);
     const [event, setEvent] = useState({});
+    // eslint-disable-next-line no-unused-vars
     const [eventName, setEventName] = useState("");
+    // eslint-disable-next-line no-unused-vars
     const [location, setLocation] = useState("");
+    // eslint-disable-next-line no-unused-vars
     const [date, setDate] = useState("");
+    // eslint-disable-next-line no-unused-vars
     const [time, setTime] = useState("");
     const [invitedUsers, setInvitedUsers] = useState([]);
     const [submitted, setSubmitted] = useState(false);
