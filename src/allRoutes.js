@@ -10,6 +10,9 @@ import MapSearch from "./components/MapSearch";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Welcome from "./components/Welcome";
+import ForgotPassword from "./components/Password/ForgotPassword";
+import ResetPassword from "./components/Password/ResetPassword";
+
 
 function allRoutes() {
   return (
@@ -25,6 +28,9 @@ function allRoutes() {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/welcome" element={<Welcome />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/resetPassword/:token" element={<ResetPassword />} />
 
 
 

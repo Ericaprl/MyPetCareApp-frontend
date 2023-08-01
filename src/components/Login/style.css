@@ -46,7 +46,7 @@
 .form h2 {
     justify-content: center;
     justify-items: center;
-    margin: 10px;
+    margin: px;
 
 }
 
@@ -75,6 +75,8 @@
 
 .error {
     color: red;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -112,4 +114,11 @@ button a {
       width: 100%;
       height: auto;
     }
+  }
+
+
+  .create p , 
+  .create h2 {
+    margin: 0px;
+    padding: 10px;
   }

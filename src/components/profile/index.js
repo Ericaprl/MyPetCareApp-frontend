@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
-import api from "../../services/api";
 import "./style.css";
 import EventForm from "./EventForm";
+import Chat from "./Chat";
+import YouTube from "react-youtube";
+import  {ReactComponent as Brand } from "../images/pawprint.svg"
+
+
 
 function Section2() {
   return (
-    <div className="section2-content" >
+    <div className="section3-content" >
       <p className="p-section2"> Schedule a playdate and events with another pet owner and help your pet make friends.  </p>
       <EventForm />
 
@@ -14,6 +18,16 @@ function Section2() {
 
   );
 
+}
+
+function Section3() {
+  return (
+    <div className="section2-content" >
+      <p className="p-section3">Make a new friend by sending a message to another pet owner. </p>
+      <Chat />
+
+    </div>
+  );
 }
 
 
@@ -25,6 +39,8 @@ function Profile() {
 
     <div className="p-container">
       <div className="section1-container">
+
+
         {/* Seção 1: user name  */}
         <div className="profile-info">
           <h1>Hello,</h1>
@@ -39,24 +55,34 @@ function Profile() {
 
 
           {/* Seção 3:  */}
-
           <div className="section-3">
-          <p className="p-section3">Make a new friend by sending a message to another pet owner. </p>
+            <Section3 />
           </div>
 
 
           {/* Seção 4:  */}
           <div className="section-4">
-          <p className="p-section4"> Discover pet shops and grooming nearby. </p>
-          <a href="/mapSearch">
-                        <button> Pet shops </button>
-                    </a>
+            <p className="p-section4"> Discover pet shops and grooming nearby. </p>
+            <a href="/mapSearch">
+              <button> Pet shops </button>
+            </a>
           </div>
-
-
-
         </div>
       </div>
+      <div className="p-logo">
+            
+            <Brand />
+            
+          </div>
+      {/* Seção 6:  */}
+      <div className="section-5">
+        <p className="p-section4"> Join the pack of Pet Lovers and embark on a journey of unconditional love and endless tail-wagging happiness. 
+          Discover the transformative power of pets in our heartfelt video below.</p>
+            <YouTube videoId="w0K6UBzGQ7E" />
+          </div>
+
+         
+
     </div>
   );
 }

@@ -20,7 +20,8 @@ function Header() {
       <nav className="navbar">
         <div className="header-container">  
         <div className="logo">
-            <Brand />
+            <a href="/home">
+            <Brand /></a>
             
           </div>
           <div className="menu-icon" onClick={handleShowNavbar}>

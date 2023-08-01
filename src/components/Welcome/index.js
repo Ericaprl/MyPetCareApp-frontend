@@ -13,7 +13,7 @@ function Welcome() {
       <h1>Welcome,</h1>
         <h2> {fname}!</h2>
       <p>Thank you for registering. Your account has been created successfully.</p>
-      <a href="/profile">
+      <a href="/login">
         <button type='submit'>Continue</button>
       </a>
     </div>

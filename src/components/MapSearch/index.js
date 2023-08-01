@@ -79,23 +79,22 @@ function MapSearch() {
         libraries: ["places"],
     });
 
+ 
+
     useEffect(() => {
-        if (isLoaded) {
-            createMarkers();
-        }
-    }, [isLoaded]);
-
-    const center = {
-        lat: 53.34762448470476,
-        lng: -6.26695454200322,
-    };
-
+      
+        
     function createMarkers() {
+        const center = {
+            lat: 53.34762448470476,
+            lng: -6.26695454200322,
+        };
         const map = new window.google.maps.Map(mapContainerRef.current, {
             zoom: 12,
             center: center,
             mapId: "4504f8b37365c3d0",
         });
+
 
         const infoWindow = new window.google.maps.InfoWindow();
 
@@ -112,7 +111,17 @@ function MapSearch() {
                 infoWindow.open(map, marker);
             });
         });
+        
     }
+    if (isLoaded) {
+        createMarkers();
+    }
+}, [isLoaded]);
+
+const center = {
+    lat: 53.34762448470476,
+    lng: -6.26695454200322,
+};
 
     return (
         <div className="map-container">
