@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "./style.css";
-import EventForm from "./EventForm";
-import Chat from "./Chat";
+import EventForm from "../Profile-Componets/EventForm";
+import Chat from "../Profile-Componets/Chat";
 import YouTube from "react-youtube";
 import  {ReactComponent as Brand } from "../images/pawprint.svg"
 

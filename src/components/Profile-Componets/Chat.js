@@ -1,5 +1,3 @@
-// Frontend - Chat.js
-
 import React, { useState, useEffect, useContext,useCallback } from 'react';
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
