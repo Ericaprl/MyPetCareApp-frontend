@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Profile from "./components/Profile";
+import UserProfile from "./components/UserProfile";
 import MapSearch from "./components/MapSearch";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
@@ -23,7 +23,7 @@ function allRoutes() {
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/mapSearch" element={<MapSearch />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
