@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://myPetCareApp-frontend.onrender.com",
+  baseURL: "http://localhost:1717",
 });
 
 

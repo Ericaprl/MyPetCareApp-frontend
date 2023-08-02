@@ -1,9 +1,7 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import registerIMG from "../images/registerIMG.png";
-
 import api  from "../../services/api"
-
 import "./style.css";
 
 
